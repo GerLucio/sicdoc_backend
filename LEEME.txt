@@ -1,0 +1,1 @@
+Esta carpeta debe copiarse en el directorio www/apps/
