@@ -22,7 +22,7 @@
 	
 	$nuevo = $usuario_request['nuevo'];
 	$anterior = $usuario_request['anterior'];
-	$path = '../../files_sicdoc/';
+	$path = '../../../files_sicdoc/';
 	$correcto = rename($path.$anterior, $path.$nuevo);
 	if($correcto){
 		$respuesta = array('Exito' => 'Archivo subido correctamente');

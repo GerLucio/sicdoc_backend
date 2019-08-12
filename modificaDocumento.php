@@ -31,7 +31,7 @@
 		exit;
 	}
 
-	$path = '../../files_sicdoc/';
+	$path = '../../../files_sicdoc/';
 	$nombre_archivo = trim($documento_request['nombre_archivo']);
 
 	$documento = new Documento();

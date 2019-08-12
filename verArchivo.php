@@ -6,7 +6,7 @@
 	header('Content-type: text/xml');
 	
 	$archivo = $_GET['file'];
-	$ruta = '../../files_sicdoc/'.$archivo;
+	$ruta = '../../../files_sicdoc/'.$archivo;
 	header ("Content-Disposition: attachment; filename=".$archivo."");
 	header ("Content-Type: application/octet-stream");
 	header ("Content-Length: ".filesize($ruta));

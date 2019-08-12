@@ -9,7 +9,7 @@
 		exit;
 	}
 
-	$path = '../../files_sicdoc/';
+	$path = '../../../files_sicdoc/';
 	$fecha_actual = date("d-m-Y H:i:s");
 	$formatos = array(".xlsx", ".xls", ".doc", ".docx", ".pdf");
 	$formato_valido = false;

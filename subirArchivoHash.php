@@ -8,7 +8,7 @@
 		exit;
 	}
 
-	$path = '../../files_sicdoc/';
+	$path = '../../../files_sicdoc/';
 	$formatos = array(".xlsx", ".xls", ".doc", ".docx", ".pdf");
 	$formato_valido = false;
 
