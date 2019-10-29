@@ -32,7 +32,9 @@
 	}
 
 	$path = '../../../files_sicdoc/';
+	$cambio = trim($documento_request['cambio']);
 	$nombre_archivo = trim($documento_request['nombre_archivo']);
+	$ruta = trim($documento_request['documento']['ruta']);
 
 	$documento = new Documento();
 	$documento->id_documento = trim($documento_request['documento']['id_documento']);
@@ -66,10 +68,6 @@
 	oci_bind_by_name($ejecuta_consulta_inserta, ':ubicacion', $documento->ubicacion);
 	oci_bind_by_name($ejecuta_consulta_inserta, ':id_documento', $documento->id_documento);
 	$inserta = oci_execute($ejecuta_consulta_inserta);
-	
-	$cambio = trim($documento_request['cambio']);
-	$nombre_archivo = trim($documento_request['nombre_archivo']);
-	$ruta = trim($documento_request['documento']['ruta']);
 
 	if($inserta){
 
@@ -81,10 +79,9 @@
 		$inserta_revision = oci_execute($ejecuta_consulta_revision);
 		
 		if($inserta_revision){
-			if($cambio){
+			if($cambio && $ruta != $nombre_archivo){
 				unlink($path.$ruta);
 			}
-	
 			else{
 				rename($path.$ruta, $path.$nombre_archivo);
 			}

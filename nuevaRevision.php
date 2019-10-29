@@ -221,8 +221,7 @@
 				$mail->Body = utf8_decode("<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/> 
 					Estimado(a) <strong>".$usuario['NOMBRE']."</strong> buen día.<br><br>
 					<p>Le notificamos que se actualizo el documento <strong>".$documento->codigo." ".$documento->nombre."</strong> 
-					a la revisión <strong>R".$revision->no_revision."</strong> en el Sistema Interno de Control de Documentos (SICDOC), así mismo, 
-					solicitamos su valioso apoyo a fin de actualizar su lista de control de registros de su proceso.</p><br><br>
+					a la revisión <strong>R".$revision->no_revision."</strong> en el Sistema Interno de Control de Documentos (SICDOC).</p><br><br>
 					<p><img src='cid:firma'></p>
 					<p>Mensaje enviado de forma automática.</p>");
 					//Enviamos el correo

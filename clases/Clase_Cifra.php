@@ -19,7 +19,7 @@
 			$algoritmo = 'aes-256-cbc';
 
 			$file = fopen("C:/apps/2314568765845/2345.txt", "r");
-			//$file = fopen("/home/gerlc/apps/111358/dsm3.txt", "r");
+			//$file = fopen("/var/www/2314568765845/2345.txt", "r") or die("Error al abrir el archivo");
 			while(!feof($file)) {
 				$z = fgets($file);
 			}
