@@ -1,5 +1,8 @@
 <?PHP
 	error_reporting(0);
+    //error_reporting(E_ALL);
+    //ini_set('display_errors', TRUE);
+    //ini_set('display_startup_errors', TRUE);
 	
 	header('Access-Control-Allow-Origin: *');
 	header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
@@ -192,7 +195,7 @@
 		try {
 			$mail->IsSMTP(); // Se especifica a la clase que se utilizará SMTP 
 			
-			$correo_emisor="upev.sgc@gmail.com";
+			$correo_emisor="dev.sgc.sicdoc@gmail.com";
 			$nombre_emisor=utf8_decode("Coordinación SGC-UPEV");
 			$datos = new CifraPass();
 

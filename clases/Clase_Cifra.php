@@ -8,7 +8,7 @@
 
 		/**constructor que le asigna valores a los atributos*/
 		function __construct(){
-			$this->password_correo = "ayyyTiKkaApYtIJKo6aAVKnt5IKF0n/3qnPl38v9zPY=";
+			$this->password_correo = "PrW7t/De0DFJODtStCGfsQtitWednkniVFhTOZUlVrw=";
 			
 		}
 
