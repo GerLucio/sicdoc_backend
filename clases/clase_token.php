@@ -20,12 +20,18 @@
 		}
 		
 		function cifra($texto) : string {
-			$file = fopen("C:/apps/2314568765845/2345.txt", "r") or die("Error al abrir el archivo");
-			//$file = fopen("/var/www/2314568765845/2345.txt", "r") or die("Error al abrir el archivo");
-			while(!feof($file)) {
-				$z = fgets($file);
+			// $file = fopen("C:/apps/2314568765845/2345.txt", "r") or die("Error al abrir el archivo");
+			// //$file = fopen("/var/www/2314568765845/2345.txt", "r") or die("Error al abrir el archivo");
+			// while(!feof($file)) {
+			// 	$z = fgets($file);
+			// }
+			// fclose($file);
+
+			$z = file_get_contents("C:/apps/2314568765845/2345.txt");
+			if(!$z){
+				$z = file_get_contents("/var/www/2314568765845/2345.txt");
 			}
-			fclose($file);
+
 			/**llave de 16 bytes para poder descifrar, dada en hexadecimal*/
 			$key = pack('H*', $z);
 			
@@ -42,12 +48,17 @@
 			
 			$algoritmo = 'aes-256-cbc';
 
-			$file = fopen("C:/apps/2314568765845/2345.txt", "r") or die("Error al abrir el archivo");
-			//$file = fopen("/var/www/2314568765845/2345.txt", "r") or die("Error al abrir el archivo");
-			while(!feof($file)) {
-				$z = fgets($file);
+			// $file = fopen("C:/apps/2314568765845/2345.txt", "r") or die("Error al abrir el archivo");
+			// //$file = fopen("/var/www/2314568765845/2345.txt", "r") or die("Error al abrir el archivo");
+			// while(!feof($file)) {
+			// 	$z = fgets($file);
+			// }
+			// fclose($file);
+
+			$z = file_get_contents("C:/apps/2314568765845/2345.txt");
+			if(!$z){
+				$z = file_get_contents("/var/www/2314568765845/2345.txt");
 			}
-			fclose($file);
 
 			/**llave de 16 bytes para poder descifrar, dada en hexadecimal*/
 			$key = pack('H*', $z);
